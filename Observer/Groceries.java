@@ -8,9 +8,11 @@ public class Groceries implements Subject {
 	
 	private ArrayList<Observer> observers;
 	private double price;
+	private String categoryName;
 	
 	public Groceries() {		
 		observers = new ArrayList<Observer>();
+		categoryName = "Groceries";	// can have other category groups/classes such as kitchenware and clothes
 	}
 	
 	public void register(Observer newObserver) {
@@ -30,6 +32,11 @@ public class Groceries implements Subject {
 	public void setPrice(double newPrice){
 		this.price = newPrice;
 		notifyObserver();
+	}
+
+	@Override
+	public String getCategoryName() {
+		return categoryName;
 	}
 	
 }
