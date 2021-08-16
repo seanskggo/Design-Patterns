@@ -1,4 +1,4 @@
-package programmingexample6;
+package Decorator;
 
 public class Shoes extends Product {
 
